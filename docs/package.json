@@ -1,0 +1,22 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build",
+    "serve": "vuepress serve"
+  },
+  "dependencies": {
+    "@meoc/comp": "0.0.4",
+    "element-ui": "^2.15.10"
+  },
+  "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
+    "vuepress": "^1.9.7"
+  }
+}
