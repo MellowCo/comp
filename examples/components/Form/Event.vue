@@ -1,5 +1,5 @@
 <script>
-import { errorNotify, successMessage, successNotify } from '../../packages'
+import { errorNotify, successMessage, successNotify } from '../../../packages'
 
 export default {
   data(){

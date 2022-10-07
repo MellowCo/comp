@@ -1,12 +1,12 @@
 <!--
  * @Author: licl
  * @Date: 2022-10-05 08:19:19
- * @LastEditTime: 2022-10-06 20:41:23
+ * @LastEditTime: 2022-10-07 08:34:13
  * @LastEditors: licl
  * @Description:
 -->
 <script>
-import { requireRule } from '../../packages'
+import { requireRule } from '../../../packages'
 
 export default {
   data(){

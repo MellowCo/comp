@@ -1,10 +1,3 @@
-<!--
- * @Author: licl
- * @Date: 2022-10-05 08:19:19
- * @LastEditTime: 2022-10-06 16:02:22
- * @LastEditors: licl
- * @Description:
--->
 <script>
   import { requireRule } from '@meoc/comp'
   
@@ -15,8 +8,7 @@
           data: {
             name: '',
             region: '',
-            date1: '',
-            date2: '',
+            date:[],
             delivery: false,
             type: [],
             resource: '',

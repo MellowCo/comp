@@ -25,13 +25,6 @@ export default {
           { prop: 'name', label: '姓名' },
           { prop: 'address', label: '地址' },
         ],
-        showPage: false,
-      },
-      defaultTableConfig: {
-        stripe: true,
-        border: true,
-        size: 'mini',
-        highlightCurrentRow: true,
       },
     }
   },
@@ -41,20 +34,6 @@ export default {
 <template>
   <div>
     <LTable v-bind="tableConfig" />
-
-    <el-table :data="tableConfig.data" v-bind="defaultTableConfig" v-on="$attrs">
-      <el-table-column v-for="(column, index) in tableConfig.columns" v-bind="column" :key="index">
-        <template
-          v-if="column.slotName"
-          #default="{ row }"
-        >
-          <slot
-            :row="row"
-            :name="column.slotName"
-          />
-        </template>
-      </el-table-column>
-    </el-table>
   </div>
 </template>
 
