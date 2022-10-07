@@ -111,29 +111,20 @@
   }
   </script>
   
-  <template>
-    <div>
-      <LForm ref="formRef" v-bind="formConfig" />
-  
-      <el-button type="primary" @click="valid">
-        校验
-      </el-button>
-  
-      <el-button type="warning" @click="clearValidate">
-        清楚校验
-      </el-button>
-  
-      <el-button type="danger" @click="resetFields">
-        重置
-      </el-button>
-  
-      <div style="padding:30px">
-        {{ formConfig.data }}
-      </div>
+<template>
+  <div>
+    <LForm ref="formRef" v-bind="formConfig" />
+
+    <el-button type="primary" @click="valid"> 校验 </el-button>
+
+    <el-button type="warning" @click="clearValidate"> 清楚校验 </el-button>
+
+    <el-button type="danger" @click="resetFields"> 重置 </el-button>
+
+    <div style="padding: 30px">
+      {{ formConfig.data }}
     </div>
-  </template>
-  
-  <style lang="scss" scoped>
-  
-  </style>
+  </div>
+</template>
+
   

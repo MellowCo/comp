@@ -1,10 +1,3 @@
-<!--
- * @Author: licl
- * @Date: 2022-10-05 08:19:19
- * @LastEditTime: 2022-10-07 08:34:13
- * @LastEditors: licl
- * @Description:
--->
 <script>
 import { requireRule } from '../../../packages'
 
@@ -15,8 +8,7 @@ export default {
         data: {
           name: '',
           region: '',
-          date1: '',
-          date2: '',
+          date: [],
           delivery: false,
           type: [],
           resource: '',
@@ -123,19 +115,13 @@ export default {
   <div>
     <LForm ref="formRef" v-bind="formConfig" />
 
-    <el-button type="primary" @click="valid">
-      校验
-    </el-button>
+    <el-button type="primary" @click="valid"> 校验 </el-button>
 
-    <el-button type="warning" @click="clearValidate">
-      清楚校验
-    </el-button>
+    <el-button type="warning" @click="clearValidate"> 清楚校验 </el-button>
 
-    <el-button type="danger" @click="resetFields">
-      重置
-    </el-button>
+    <el-button type="danger" @click="resetFields"> 重置 </el-button>
 
-    <div style="padding:30px">
+    <div style="padding: 30px">
       {{ formConfig.data }}
     </div>
   </div>

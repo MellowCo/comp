@@ -80,8 +80,7 @@
 
 // type IVifFunc = () => Boolean
 
-import { isFunction } from '@meoc/utils'
-import { errorNotify } from '../../utils'
+import { errorNotify, isFunction } from '../../utils'
 import { componentsMap, defaultItemConfig } from './config'
 
 export default {
@@ -200,9 +199,15 @@ export default {
 <template>
   <el-form ref="formRef" :model="data" size="mini" v-bind="_config">
     <el-row :gutter="15">
-      <template v-for="(item, index) in formItem" >
+      <template v-for="(item, index) in formItem">
         <el-col v-if="generateIf(item)" :key="index" :span="item.span || 6">
-          <el-form-item :prop="item.prop" :label="item.label" :rules="item.rules" :label-width="item.labelWidth" style="width: 100%">
+          <el-form-item
+            :prop="item.prop"
+            :label="item.label"
+            :rules="item.rules"
+            :label-width="item.labelWidth"
+            style="width: 100%"
+          >
             <!-- 插槽 -->
             <slot v-if="item.comp === 'slot'" :name="item.slotName" />
 
@@ -231,7 +236,7 @@ export default {
                   :key="cIndex"
                   :label="cItem[item.optionValue || 'value']"
                 >
-                  {{ cItem[item.optionLabel || 'label'] }}
+                  {{ cItem[item.optionLabel || "label"] }}
                 </el-checkbox>
               </template>
 
@@ -242,7 +247,7 @@ export default {
                   :key="rIndex"
                   :label="rItem[item.optionValue || 'value']"
                 >
-                  {{ rItem[item.optionLabel || 'label'] }}
+                  {{ rItem[item.optionLabel || "label"] }}
                 </el-radio>
               </template>
 

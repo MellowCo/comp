@@ -9,6 +9,9 @@ import Event from './components/Form/Event.vue'
 import Vif from './components/Form/Vif.vue'
 import Vifs from './components/Form/Vifs.vue'
 import MyTable from './components/Table/Table.vue'
+import SlotTable from './components/Table/SlotTable.vue'
+import BtnsTable from './components/Table/BtnsTable.vue'
+import PageTable from './components/Table/PageTable.vue'
 
 export default {
   name: 'App',
@@ -23,12 +26,18 @@ export default {
     Vif,
     Vifs,
     MyTable,
+    SlotTable,
+    BtnsTable,
+    PageTable
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <PageTable />
+    <BtnsTable />
+    <SlotTable />
     <MyTable />
     <Vifs />
     <Vif />
@@ -44,12 +53,13 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
   height: 100%;
+  text-align: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

@@ -16,7 +16,8 @@ const install = function(Vue){
 }
 export default {
   install,
-  ...components,
+  LForm,
+  LTable,
 }
 
 export * from './utils'

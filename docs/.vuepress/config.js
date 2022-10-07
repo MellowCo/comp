@@ -15,6 +15,14 @@ module.exports ={
           '/guide/l-form/rules',
           '/guide/l-form/config',
         ],
+      },
+      {
+        title: 'LTable',
+        collapsable: false,
+        children: [ 
+          '/guide/l-table/use',
+          '/guide/l-table/options',
+        ],
       }
     ]
   },

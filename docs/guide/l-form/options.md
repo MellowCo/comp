@@ -77,6 +77,7 @@ export const componentsMap = {
 export const defaultItemConfig = {
   select: {
     filterable: true,
+    clearable: true
   },
   dayToDay: {
     type: 'daterange',
@@ -100,6 +101,7 @@ export const defaultItemConfig = {
     clearable: true,
     type: 'input',
     placeholder: '请输入',
+    clearable: true
   },
   readonly: {
     type: 'input',

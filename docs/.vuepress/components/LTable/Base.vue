@@ -1,5 +1,4 @@
 <script>
-// 基本使用
 export default {
   data(){
     return {
@@ -37,4 +36,3 @@ export default {
     <LTable v-bind="tableConfig" />
   </div>
 </template>
-

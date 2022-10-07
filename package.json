@@ -1,28 +1,27 @@
 {
   "name": "@meoc/comp",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "files": [
     "packages",
-    "lib",
     "types"
   ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "main": "lib/index.umd.js",
+  "main": "packages/index.js",
   "typings": "types/index.d.ts",
   "scripts": {
     "dev": "vue-cli-service serve",
-    "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build --target lib --name index packages/index.js --dest lib"
+    "release": "bumpp && npm publish"
   },
   "dependencies": {
-    "@meoc/utils": "^0.1.8",
     "core-js": "^3.8.3",
     "dayjs": "^1.11.5",
     "element-ui": "^2.15.10",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vxe-table": "^3.6.6",
+    "xe-utils": "^3.5.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -31,6 +30,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "bumpp": "^8.2.1",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "vue-template-compiler": "^2.6.14"

@@ -81,6 +81,7 @@ export const dayOptions = {
 export const defaultItemConfig = {
   select: {
     filterable: true,
+    clearable: true
   },
   dayToDay: {
     type: 'daterange',
@@ -113,6 +114,7 @@ export const defaultItemConfig = {
     type: 'textarea',
     rows: 2,
     placeholder: '请输入内容',
+    clearable: true
   },
 }
 

@@ -5,5 +5,5 @@ module.exports = defineConfig({
     index: {
       entry: 'examples/main.js',
     },
-  }
+  },
 })
