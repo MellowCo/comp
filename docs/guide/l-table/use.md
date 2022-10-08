@@ -23,9 +23,9 @@
 </demo-block>
 
 ## 网络请求分页
-在 `columns` 中 设置 `fetch` 网络请求方法
+设置 `fetch` 网络请求方法
 
-使用 `query` 方法 触发请求方法
+使用 `query` 方法 触发表格请求
 
 <demo-block>
 <LTable-Page slot="source"/>

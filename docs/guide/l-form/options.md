@@ -38,36 +38,36 @@
 ```ts
 export const componentsMap = {
   // select 选择器
-  'el-select': Select,
-  'select': Select,
+  'el-select': 'el-select',
+  'select': 'el-select',
 
   // 时间选择器
-  'dayToDay': DatePicker,
-  'month': DatePicker,
-  'year': DatePicker,
-  'el-date-picker': DatePicker,
+  'dayToDay': 'el-date-picker',
+  'month': 'el-date-picker',
+  'year': 'el-date-picker',
+  'el-date-picker': 'el-date-picker',
 
   // input 输入
-  'input': Input,
-  'readonly': Input,
-  'el-input': Input,
-  'textarea': Input,
+  'input': 'el-input',
+  'readonly': 'el-input',
+  'el-input': 'el-input',
+  'textarea': 'el-input',
 
   // switch
-  'switch': Switch,
-  'el-switch': Switch,
+  'switch': 'el-switch',
+  'el-switch': 'el-switch',
 
   // el-checkbox
-  'checkbox': CheckboxGroup,
-  'el-checkbox-group': CheckboxGroup,
+  'checkbox': 'el-checkbox-group',
+  'el-checkbox-group': 'el-checkbox-group',
 
   // el-radio
-  'radio': RadioGroup,
-  'el-radio-group': RadioGroup,
+  'radio': 'el-radio-group',
+  'el-radio-group': 'el-radio-group',
 
   // el-slider
-  'slider': Slider,
-  'el-slider': Slider,
+  'slider': 'el-slider',
+  'el-slider': 'el-slider',
 }
 ```
 

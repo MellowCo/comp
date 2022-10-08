@@ -10,7 +10,7 @@
 
 
 ## FormItem 设置
-`formItem` 中使用 `config`，设置相关表单组件的[attributes](https://element.eleme.cn/#/zh-CN/component/slider#attributes)
+`formItem` 中设置相关表单组件的[attributes](https://element.eleme.cn/#/zh-CN/component/slider#attributes)
 
 <demo-block>
 <LForm-FormItemConfig slot="source"/>

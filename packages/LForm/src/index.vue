@@ -1,85 +1,4 @@
 <script >
-// interface FormItem {
-//   /**
-//    * 表单data字段
-//    */
-//   prop: string
-
-//   /**
-//    * 表单标签
-//    */
-//   label: string
-
-//   /**
-//    * 表单域标签的的宽度，例如 '50px'
-//    */
-//   labelWidth: string
-
-//   /**
-//    * 表单验证规则
-//    */
-//   rules: []
-
-//   /**
-//    * el-form-item 占几个位置
-//    */
-//   span: string
-
-//   /**
-//    * select option 显示的label字段
-//    * @default label
-//    */
-//   optionLabel: string
-
-//   /**
-//    * select option value字段
-//    * @default value
-//    */
-//   optionValue: string
-
-//   /**
-//    * 插槽
-//    */
-//   slotName?: string
-
-//   /**
-//    * 表单组件名称
-//    */
-//   comp: string
-
-//   /**
-//    * input append 显示的文本内容
-//    * @example 元 %
-//    */
-//   appendText: string
-
-//   /**
-//    * 每项表单组件的设置
-//    * el-input
-//    */
-//   config: any
-
-//   /**
-//    * 每项表单组件的事件
-//    */
-//   handle: {}
-
-//   vIf: IVif | IVifs | IVifFunc
-// }
-
-// interface IVif {
-//   prop: string
-//   value: any
-// }
-
-// interface IVifs {
-//   props: string[]
-//   values: any[]
-//   flag: '&&' | '||'
-// }
-
-// type IVifFunc = () => Boolean
-
 import { errorNotify, isFunction } from '../../utils'
 import { componentsMap, defaultItemConfig } from './config'
 
@@ -216,7 +135,7 @@ export default {
               v-else
               v-model="data[item.prop]"
               style="width: 100%"
-              v-bind="{ ...defaultItemConfig[item.comp], ...item.config }"
+              v-bind="{ ...defaultItemConfig[item.comp], ...item }"
               v-on="item.handle"
             >
               <!-- el-option -->
