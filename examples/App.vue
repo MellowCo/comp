@@ -16,6 +16,8 @@ import ImgTable from './components/Table/ImgTable.vue'
 import Method from './components/Table/Method.vue'
 import BaseContent from './components/Content/Base.vue'
 import FM from './components/Modal/Form.vue'
+import FT from './components/Modal/Table.vue'
+import RadioTable from './components/Modal/RadioTable.vue'
 
 export default {
   name: 'App',
@@ -36,13 +38,17 @@ export default {
     ImgTable,
     Method,
     BaseContent,
-    FM
+    FM,
+    FT,
+    RadioTable
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <RadioTable />
+    <FT />
     <FM />
     <BaseContent />
     <Method />

@@ -39,6 +39,14 @@ module.exports ={
           '/guide/l-from-modal/use',
           '/guide/l-from-modal/options',
         ],
+      },
+      {
+        title: 'LTableModal',
+        collapsable: false,
+        children: [ 
+          '/guide/l-table-modal/use',
+          '/guide/l-table-modal/options',
+        ],
       }
     ]
   },

@@ -7,15 +7,15 @@ import { requireRule } from '../../../packages';
 
 function fetchList({ page, size }){
   const data = {
-    list: Array(10)
-      .fill({
+    list: Array.from({ length: 10 })
+      .map(() => ({
         date: `2016-05-02 page: ${page}`,
         name: `王小虎 size: ${size}`,
         address: '上海市普陀区金沙江路 1518 弄',
-      }),
+      })),
     total: 100
   }
-
+  console.log(data);
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(data)
@@ -68,7 +68,7 @@ export default {
     }
   },
   mounted(){
-    this.$refs.contentRef.query();
+    this.$refs.contentRef.query()
   },
   methods: {
     async queryList(page, size){

@@ -2,7 +2,7 @@
   <div>
     <LForm ref="formRef" v-bind="formConfig">
       <template #end>
-        <el-col :span="6">
+        <el-col :span="btnSpan">
           <div style="display: flex; justify-content: start">
             <el-button
               v-if="showSearchBtn"
@@ -29,6 +29,8 @@
               @click="onReset"
               >重置</el-button
             >
+
+            <slot name="btn"></slot>
           </div>
         </el-col>
       </template>
@@ -51,6 +53,10 @@ export default {
     tableConfig: {
       type: Object,
       default: () => ({})
+    },
+    btnSpan: {
+      type: Number,
+      default: 6
     },
     ajax: {
       type: Object,
@@ -102,6 +108,12 @@ export default {
     },
     onReset(){
       this.$refs.formRef.resetFields()
+    },
+    getFormRef(){
+      return this.$refs.formRef
+    },
+    getTableRef(){
+      return this.$refs.tableRef
     }
   },
 }
