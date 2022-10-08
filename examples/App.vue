@@ -14,6 +14,7 @@ import BtnsTable from './components/Table/BtnsTable.vue'
 import PageTable from './components/Table/PageTable.vue'
 import ImgTable from './components/Table/ImgTable.vue'
 import Method from './components/Table/Method.vue'
+import BaseContent from './components/Content/Base.vue'
 
 export default {
   name: 'App',
@@ -32,13 +33,15 @@ export default {
     BtnsTable,
     PageTable,
     ImgTable,
-    Method
+    Method,
+    BaseContent
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <BaseContent />
     <Method />
     <ImgTable />
     <PageTable />

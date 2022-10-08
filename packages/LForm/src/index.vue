@@ -53,13 +53,13 @@ export default {
    * 对整个表单进行校验的方法
    * @link https://element.eleme.cn/#/zh-CN/component/form#form-methods
    */
-    validate(func){
-      this.$refs.formRef.validate((valid) => {
-        if(valid)
-          func()
-        else
-          errorNotify('请选择必选项！！！')
-      })
+    async validate(){
+      try {
+        await this.$refs.formRef.validate()
+      } catch (e){
+        errorNotify('请检查必选项！！！')
+        throw new Error('require form')
+      }
     },
 
     /**
@@ -177,6 +177,8 @@ export default {
           </el-form-item>
         </el-col>
       </template>
+
+      <slot name="end"></slot>
     </el-row>
   </el-form>
 </template>

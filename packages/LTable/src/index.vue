@@ -84,18 +84,17 @@ export default {
   methods: {
     // 翻页
     async onCurrentChange(currentPage){
-      this.currentPage = currentPage
-      await this.query()
+      await this.query(currentPage, this.currentPageSize)
     },
     async onSizeChange(currentPageSize){
-      this.currentPageSize = currentPageSize
-      this.currentPage = 1
-      await this.query()
+      await this.query(1, currentPageSize)
     },
-    async query(){
+    async query(page = this.currentPage, size = this.currentPageSize){
       try {
         this.loading = true
-        await this.fetch(this.currentPage, this.currentPageSize)
+        this.currentPage = page
+        this.currentPageSize = size
+        await this.fetch(page, size)
       } finally {
         this.loading = false
       }

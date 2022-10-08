@@ -96,10 +96,9 @@ export default {
     }
   },
   methods: {
-    valid(){
-      this.$refs.formRef.validate(() => {
-        this.$message.success('校验成功')
-      })
+    async valid(){
+      await this.$refs.formRef.validate()
+      this.$message.success('校验成功')
     },
     resetFields(){
       this.$refs.formRef.resetFields()

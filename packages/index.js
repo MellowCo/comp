@@ -1,9 +1,11 @@
 import LForm from './LForm/index'
 import LTable from './LTable/index'
+import LContent from './LContent/index'
 
 const components = {
   LForm,
   LTable,
+  LContent
 }
 
 const install = function(Vue){
@@ -18,6 +20,7 @@ export default {
   install,
   LForm,
   LTable,
+  LContent
 }
 
 export * from './utils'

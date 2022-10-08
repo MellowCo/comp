@@ -22,10 +22,9 @@ export default {
     }
   },
   methods: {
-    valid() {
-        this.$refs.formRef.validate(() => {
-          successMessage('校验成功')
-        })
+    async valid() {
+      await this.$refs.formRef.validate()
+        successMessage('校验成功')
       },
       resetFields() {
         this.$refs.formRef.resetFields()
@@ -40,23 +39,16 @@ export default {
 <template>
   <div>
     <LForm ref="formRef" v-bind="formConfig" />
-    <div style="display: flex;justify-content: center;margin: 20px;">
+    <div style="display: flex; justify-content: center; margin: 20px">
       {{ formConfig.data }}
     </div>
 
-    <div style="display:flex;justify-content: center;">
-    
-        <el-button type="primary" @click="valid">
-          校验
-        </el-button>
-    
-        <el-button type="warning" @click="clearValidate">
-          清楚校验
-        </el-button>
-    
-        <el-button type="danger" @click="resetFields">
-          重置
-        </el-button>
-      </div>
+    <div style="display: flex; justify-content: center">
+      <el-button type="primary" @click="valid"> 校验 </el-button>
+
+      <el-button type="warning" @click="clearValidate"> 清楚校验 </el-button>
+
+      <el-button type="danger" @click="resetFields"> 重置 </el-button>
+    </div>
   </div>
 </template>
