@@ -40,18 +40,17 @@ export default {
   computed: {
     tableConfig(){
       const { columns } = this.$attrs
+      const customType = [ 'img', 'btn' ]
       // 将 slotName 提取到 slots.default 中
       columns.forEach(column => {
-        const { slotName, slots, btns } = column
+        const { slotName, slots, type } = column
 
-        if(btns){
-          // 添加按钮组 slot
+        if(customType.includes(type)){
           const nanoName = nanoid()
           column.slots = {
             ...slots,
             default: nanoName
           } 
-
           column.slotName = nanoName
           return
         }
@@ -72,8 +71,8 @@ export default {
       const { columns } = this.tableConfig    
 
       const slots = []
-      columns.forEach(({ slotName, btns }) => {
-        slotName && slots.push({ slotName, btns })
+      columns.forEach(({ slotName, imgW = '100px', imgH = '100px', btns }) => {
+        slotName && slots.push({ slotName, imgW, imgH, btns })
       })
 
       return slots
@@ -109,11 +108,11 @@ export default {
   <div v-loading="loading">
     <vxe-grid class="mytable-scrollbar" v-bind="tableConfig" v-on="$listeners">
       <template
-        v-for="({ slotName, btns }, index) in slots"
-        #[slotName]="{ row, rowIndex, column }"
+        v-for="({ slotName, imgW, imgH, btns }, index) in slots"
+        #[slotName]="{ data, column, row, rowIndex }"
       >
         <!-- 按钮组 -->
-        <div v-if="btns" :key="index">
+        <div v-if="column.type === 'btn'" :key="index">
           <el-button
             v-for="(btn, bIndex) in btns"
             :key="bIndex"
@@ -121,6 +120,18 @@ export default {
             v-bind="{ ...defaultBtnConfig, ...btn }"
             >{{ btn.text }}</el-button
           >
+        </div>
+
+        <!-- 图片 -->
+        <div v-if="column.type === 'img'" :key="index">
+          <el-image
+            :style="{
+              width: `${imgW}`,
+              height: `${imgH}`,
+            }"
+            :src="row[column.field]"
+            :preview-src-list="data.map((val) => val[column.field])"
+          ></el-image>
         </div>
 
         <!-- 自定义插槽 通过 slots 动态生成插槽-->
