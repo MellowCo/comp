@@ -10,14 +10,17 @@
 | 其他参数 | 与 [vxetable](https://vxetable.cn/v3/#/grid/api) 相同 | - | - |
 
 ## columns
-新增 `slotName` 与 `btns`
-
 | 参数    | 说明     | 类型    | 可选值      | 默认值 |
 |---------|----------|---------|-------------|--------|
 | slotName | 指定插槽名称，[示例](/guide/l-table/use.md#自定义插槽) | number | - | - |
-| btns | 生成操作按钮，[示例](/guide/l-table/use.md#操作按钮) | number| - |-|
+| type | 列的类型，添加  [btn](/guide/l-table/use.md#操作按钮) [img](/guide/l-table/use.md#图片) | string | - |-|
+| btns | 生成操作按钮，type 为 `btn` 时使用 | number| - |-|
+| imgW | 图片宽度，type 为 `img` 时使用 | strng | - |100px|
+| imgH | 图片高度，type 为 `img` 时使用 | strng | - |100px|
+| 其他参数 | 与 [vxetable](https://vxetable.cn/v3/#/grid/api) 相同 | - | - |
 
 ## LTable Methods
 | 方法名    | 说明     | 参数    |
 |---------|----------|---------|
 | query | 执行表格查询 `fetch` 方法，[示例](/guide/l-table/use.md#网络请求分页) | - |
+| method | 执行 [vxe-table methods](https://vxetable.cn/v3/#/grid/api)，[示例](/guide/l-table/use.md#vxe-table-methods) | (methodName ,...args) => {} |

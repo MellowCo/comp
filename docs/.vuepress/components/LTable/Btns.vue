@@ -17,7 +17,7 @@ export default {
           { field: 'date', title: '日期' },
           { field: 'name', title: '姓名' },
           { field: 'address', title: '地址' },
-          { title: '操作按钮', 
+          { title: '操作按钮', type:'btn',
             btns: [
               {
                 text: '删除',

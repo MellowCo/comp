@@ -15,11 +15,19 @@
 
 
 ## 操作按钮
-在 `columns` 中 设置 `btns` 生成按钮
+`type` 为 `btn`, 在 `columns` 中 设置 `btns` 生成按钮
 
 <demo-block>
 <LTable-Btns slot="source"/>
 <<< @/.vuepress/components/LTable/Btns.vue
+</demo-block>
+
+## 图片
+`type` 为 `img`, 通过 `imgW`,`imgH` 调整宽高
+
+<demo-block>
+<LTable-Img slot="source"/>
+<<< @/.vuepress/components/LTable/Img.vue
 </demo-block>
 
 ## 网络请求分页
@@ -30,4 +38,11 @@
 <demo-block>
 <LTable-Page slot="source"/>
 <<< @/.vuepress/components/LTable/Page.vue
+</demo-block>
+
+## vxe-table methods
+
+<demo-block>
+<LTable-Method slot="source"/>
+<<< @/.vuepress/components/LTable/Method.vue
 </demo-block>

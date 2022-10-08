@@ -99,14 +99,23 @@ export default {
       } finally {
         this.loading = false
       }
-    }
+    },
+    // 调用 vxe-table method
+    method(methodName, ...args){
+      return this.$refs.tableRef[methodName](...args)
+    },
   },
 }
 </script>
 
 <template>
   <div v-loading="loading">
-    <vxe-grid class="mytable-scrollbar" v-bind="tableConfig" v-on="$listeners">
+    <vxe-grid
+      ref="tableRef"
+      class="mytable-scrollbar"
+      v-bind="tableConfig"
+      v-on="$listeners"
+    >
       <template
         v-for="({ slotName, imgW, imgH, btns }, index) in slots"
         #[slotName]="{ data, column, row, rowIndex }"

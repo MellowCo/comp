@@ -13,6 +13,7 @@ import SlotTable from './components/Table/SlotTable.vue'
 import BtnsTable from './components/Table/BtnsTable.vue'
 import PageTable from './components/Table/PageTable.vue'
 import ImgTable from './components/Table/ImgTable.vue'
+import Method from './components/Table/Method.vue'
 
 export default {
   name: 'App',
@@ -30,13 +31,15 @@ export default {
     SlotTable,
     BtnsTable,
     PageTable,
-    ImgTable
+    ImgTable,
+    Method
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <Method />
     <ImgTable />
     <PageTable />
     <BtnsTable />
