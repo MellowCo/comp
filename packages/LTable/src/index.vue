@@ -161,7 +161,7 @@ export default {
           ...defaultPageConfig,
           ...pageConfig,
         }"
-        :current-page.sync="currentPage"
+        :current-page="currentPage"
         @size-change="onSizeChange"
         @current-change="onCurrentChange"
       />

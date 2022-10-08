@@ -22,8 +22,8 @@ export default {
     }
   },
   methods: {
-    async valid() {
-      await this.$refs.formRef.validate()
+      async valid() {
+        await this.$refs.formRef.validate()
         successMessage('校验成功')
       },
       resetFields() {

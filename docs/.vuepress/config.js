@@ -23,6 +23,14 @@ module.exports ={
           '/guide/l-table/use',
           '/guide/l-table/options',
         ],
+      },
+      {
+        title: 'LContent',
+        collapsable: false,
+        children: [ 
+          '/guide/l-content/use',
+          '/guide/l-content/options',
+        ],
       }
     ]
   },
