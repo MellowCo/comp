@@ -18,6 +18,7 @@ import BaseContent from './components/Content/Base.vue'
 import FM from './components/Modal/Form.vue'
 import FT from './components/Modal/Table.vue'
 import RadioTable from './components/Modal/RadioTable.vue'
+import BaseModal from './components/Modal/Base.vue'
 
 export default {
   name: 'App',
@@ -40,13 +41,14 @@ export default {
     BaseContent,
     FM,
     FT,
-    RadioTable
+    RadioTable, BaseModal
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <BaseModal />
     <RadioTable />
     <FT />
     <FM />

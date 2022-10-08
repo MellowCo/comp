@@ -3,13 +3,15 @@ import LTable from './LTable/index'
 import LContent from './LContent/index'
 import LFormModal from './LFormModal/index'
 import LTableModal from './LTableModal/index'
+import LModal from './LModal/index'
 
 const components = {
   LForm,
   LTable,
   LContent,
   LFormModal,
-  LTableModal
+  LTableModal,
+  LModal
 }
 
 const install = function(Vue){
@@ -26,7 +28,8 @@ export default {
   LTable,
   LContent,
   LFormModal,
-  LTableModal
+  LTableModal,
+  LModal
 }
 
 export * from './utils'

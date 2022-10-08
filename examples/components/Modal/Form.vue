@@ -1,7 +1,7 @@
 <template>
   <div style="margin: 30px 0">
     <el-button @click="onShow">show modal</el-button>
-    <LFormModal ref="formRef" :show.sync="show" v-bind="modalConfig" />
+    <LFormModal :show.sync="show" v-bind="modalConfig" />
   </div>
 </template>
 

@@ -5,7 +5,6 @@ module.exports ={
     sidebar: [
       {
         title: 'LForm',
-        collapsable: false,
         children: [ 
           '/guide/l-form/example',
           '/guide/l-form/options',
@@ -18,7 +17,6 @@ module.exports ={
       },
       {
         title: 'LTable',
-        collapsable: false,
         children: [ 
           '/guide/l-table/use',
           '/guide/l-table/options',
@@ -26,7 +24,6 @@ module.exports ={
       },
       {
         title: 'LContent',
-        collapsable: false,
         children: [ 
           '/guide/l-content/use',
           '/guide/l-content/options',
@@ -34,7 +31,6 @@ module.exports ={
       },
       {
         title: 'LFormModal',
-        collapsable: false,
         children: [ 
           '/guide/l-from-modal/use',
           '/guide/l-from-modal/options',
@@ -42,10 +38,16 @@ module.exports ={
       },
       {
         title: 'LTableModal',
-        collapsable: false,
         children: [ 
           '/guide/l-table-modal/use',
           '/guide/l-table-modal/options',
+        ],
+      },
+      {
+        title: 'LModal',
+        children: [ 
+          '/guide/l-modal/use',
+          '/guide/l-modal/options',
         ],
       }
     ]
