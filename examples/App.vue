@@ -15,6 +15,7 @@ import PageTable from './components/Table/PageTable.vue'
 import ImgTable from './components/Table/ImgTable.vue'
 import Method from './components/Table/Method.vue'
 import BaseContent from './components/Content/Base.vue'
+import FM from './components/Modal/Form.vue'
 
 export default {
   name: 'App',
@@ -34,13 +35,15 @@ export default {
     PageTable,
     ImgTable,
     Method,
-    BaseContent
+    BaseContent,
+    FM
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <FM />
     <BaseContent />
     <Method />
     <ImgTable />

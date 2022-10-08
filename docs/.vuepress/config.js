@@ -31,6 +31,14 @@ module.exports ={
           '/guide/l-content/use',
           '/guide/l-content/options',
         ],
+      },
+      {
+        title: 'LFormModal',
+        collapsable: false,
+        children: [ 
+          '/guide/l-from-modal/use',
+          '/guide/l-from-modal/options',
+        ],
       }
     ]
   },
