@@ -86,21 +86,24 @@ export default {
       this.$refs.formRef.resetFields()
     },
     // 是否显示
-    generateIf(item){
-      const { vIf } = item
+    showItem(item){
+      const { vIf, vElse } = item
 
-      if(!vIf)
+      if(!vIf && !vElse)
         return true
 
-      if(isFunction(vIf))
-        return vIf()
+      return vIf ? this.generateIf(vIf) : !this.generateIf(vElse)
+    },
+    generateIf(ifOptions){
+      if(isFunction(ifOptions))
+        return ifOptions()
 
-      if(vIf.prop){
-        const { prop, value } = vIf 
+      if(ifOptions.prop){
+        const { prop, value } = ifOptions 
         return this.data[prop] === value
       }
 
-      const { props: _p, values, flag } = vIf 
+      const { props: _p, values, flag } = ifOptions 
 
       const arr = _p.map((prop, index) => {
         return this.data[prop] === values[index]
@@ -119,7 +122,7 @@ export default {
   <el-form ref="formRef" :model="data" size="mini" v-bind="_config">
     <el-row :gutter="15">
       <template v-for="(item, index) in formItem">
-        <el-col v-if="generateIf(item)" :key="index" :span="item.span || 6">
+        <el-col v-if="showItem(item)" :key="index" :span="item.span || 6">
           <el-form-item
             :prop="item.prop"
             :label="item.label"

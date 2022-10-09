@@ -4,17 +4,17 @@ export default {
     return {
       formConfig: {
         data: {
-          show: null,
+          show: 1,
         },
         formItem: [
-          { comp: 'select', prop: 'show', label: 'vif显示', span: 6 },
+          { comp: 'select', prop: 'show', label: 'vlse显示', span: 6 },
           {
             comp: 'input',
             prop: 'i1',
             label: 'input1',
             span: 6,
-            vIf: {
-              prop: 'show', value: 1,
+            vElse: {
+              prop: 'show', value: 2,
             },
           },
           {
@@ -22,10 +22,10 @@ export default {
             prop: 'i2',
             label: 'input2',
             span: 6,
-            vIf: {
-              prop: 'show', value: 2,
+            vElse: {
+              prop: 'show', value: 1,
             },
-          }
+          },
         ],
         options: {
           show: [

@@ -7,6 +7,7 @@ import CheckBox from './components/Form/CheckBox.vue'
 import Radio from './components/Form/Radio.vue'
 import Event from './components/Form/Event.vue'
 import Vif from './components/Form/Vif.vue'
+import VElse from './components/Form/VElse.vue'
 import Vifs from './components/Form/Vifs.vue'
 import MyTable from './components/Table/Table.vue'
 import SlotTable from './components/Table/SlotTable.vue'
@@ -31,6 +32,7 @@ export default {
     Radio,
     Event,
     Vif,
+    VElse,
     Vifs,
     MyTable,
     SlotTable,
@@ -61,6 +63,7 @@ export default {
     <MyTable />
     <Vifs />
     <Vif />
+    <VElse />
     <Event />
     <Form />
     <Date />
