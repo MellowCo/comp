@@ -35,6 +35,7 @@
         </el-col>
       </template>
     </LForm>
+    <slot name="center"></slot>
     <LTable ref="tableRef" v-bind="tableConfig" :fetch="search"></LTable>
   </div>
 </template>
