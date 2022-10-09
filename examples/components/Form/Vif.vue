@@ -26,6 +26,12 @@ export default {
               prop: 'show', value: 2,
             },
           },
+          {
+            comp: 'input',
+            prop: 'i2',
+            label: 'input3',
+            span: 6,
+          },
         ],
         options: {
           show: [
@@ -42,7 +48,7 @@ export default {
 <template>
   <div>
     <LForm v-bind="formConfig" />
-    <div style="display: flex;justify-content: center;margin: 20px;">
+    <div style="display: flex; justify-content: center; margin: 20px">
       {{ formConfig.data }}
     </div>
   </div>

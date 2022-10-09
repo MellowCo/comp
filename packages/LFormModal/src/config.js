@@ -1,5 +1,5 @@
 export const defaultDialogConfig = {
   width: '35%',
-  top: '5vh',
+  top: '2vh',
   appendToBody: true,
 }
