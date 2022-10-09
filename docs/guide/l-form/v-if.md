@@ -31,3 +31,11 @@
 <LForm-VifFunc slot="source"/>
 <<< @/.vuepress/components/LForm/VifFunc.vue
 </demo-block>
+
+
+## vElse
+
+<demo-block>
+<LForm-VElse slot="source"/>
+<<< @/.vuepress/components/LForm/VElse.vue
+</demo-block>

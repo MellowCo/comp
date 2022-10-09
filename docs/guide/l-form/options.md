@@ -31,6 +31,7 @@
 | config | 每项表单组件的属性设置，[见 element-ui](https://element.eleme.cn/#/zh-CN/component/input#input-attributes) | object | - | - |
 | handle | 每项表单组件的时间设置，[见 element-ui](https://element.eleme.cn/#/zh-CN/component/input#input-events) | object | - | - |
 | vIf | 控制 el-form-item 显示 | {prop,value}<br>{props,values,flag}<br>()=>boolean | - | - |
+| vElse | 控制 el-form-item 显示 | {prop,value}<br>{props,values,flag}<br>()=>boolean | - | - |
 
 
 ## componentMap

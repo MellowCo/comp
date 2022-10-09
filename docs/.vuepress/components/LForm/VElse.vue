@@ -1,20 +1,27 @@
+<!--
+ * @Author: licl
+ * @Date: 2022-10-09 17:03:46
+ * @LastEditTime: 2022-10-09 17:04:28
+ * @LastEditors: licl
+ * @Description: 
+-->
 <script>
   export default {
     data() {
       return {
         formConfig: {
           data: {
-            show: null,
+            show: 1,
           },
           formItem: [
-            { comp: 'select', prop: 'show', label: 'vif显示', span: 6 },
+            { comp: 'select', prop: 'show', label: 'velse显示', span: 6 },
             {
               comp: 'input',
               prop: 'i1',
               label: 'input1',
               span: 6,
-              vIf: {
-                prop: 'show', value: 1,
+              vElse: {
+                prop: 'show', value: 2,
               },
             },
             {
@@ -22,8 +29,8 @@
               prop: 'i2',
               label: 'input2',
               span: 6,
-              vIf: {
-                prop: 'show', value: 2,
+              vElse: {
+                prop: 'show', value: 1,
               },
             },
           ],

@@ -12,7 +12,7 @@
     "serve": "vuepress serve"
   },
   "dependencies": {
-    "@meoc/comp": "^0.0.9",
+    "@meoc/comp": "^0.0.10",
     "element-ui": "^2.15.10",
     "vxe-table": "^3.6.6",
     "xe-utils": "^3.5.7"
