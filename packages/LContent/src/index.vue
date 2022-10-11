@@ -3,7 +3,9 @@
     <LForm ref="formRef" v-bind="formConfig">
       <template #end>
         <el-col :span="btnSpan">
-          <div style="display: flex; justify-content: start">
+          <div
+            style="display: flex; justify-content: center; margin-bottom: 18px"
+          >
             <el-button
               v-if="showSearchBtn"
               :loading="searchLoading"

@@ -34,7 +34,7 @@ export default {
       defaultBtnConfig,
       loading: false,
       currentPage: 1,
-      currentPageSize: 15
+      currentPageSize: 15,
     }
   },
   computed: {
@@ -62,9 +62,7 @@ export default {
           }
         }
       });
-
-
-      return { ...defaultTableConfig, ...this.$attrs }
+      return JSON.parse(JSON.stringify({ ...defaultTableConfig, ...this.$attrs }))
     },
     // 生成插槽
     slots(){
@@ -74,7 +72,6 @@ export default {
       columns.forEach(({ slotName, imgW = '100px', imgH = '100px', btns }) => {
         slotName && slots.push({ slotName, imgW, imgH, btns })
       })
-
       return slots
     }
   },
@@ -116,11 +113,11 @@ export default {
       v-on="$listeners"
     >
       <template
-        v-for="({ slotName, imgW, imgH, btns }, index) in slots"
+        v-for="{ slotName, imgW, imgH, btns } in slots"
         #[slotName]="{ data, column, row, rowIndex }"
       >
         <!-- 按钮组 -->
-        <div v-if="column.type === 'btn'" :key="index">
+        <div v-if="column.type === 'btn'" :key="slotName">
           <el-button
             v-for="(btn, bIndex) in btns"
             :key="bIndex"
@@ -131,7 +128,7 @@ export default {
         </div>
 
         <!-- 图片 -->
-        <div v-if="column.type === 'img'" :key="index">
+        <div v-else-if="column.type === 'img'" :key="slotName">
           <el-image
             :style="{
               width: `${imgW}`,
@@ -144,6 +141,7 @@ export default {
 
         <!-- 自定义插槽 通过 slots 动态生成插槽-->
         <slot
+          v-else
           :name="slotName"
           :row="row"
           :row-index="rowIndex"
