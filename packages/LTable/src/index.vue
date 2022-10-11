@@ -1,6 +1,6 @@
 <script>
 import { defaultPageConfig, defaultTableConfig, defaultTableColumnConfig, defaultBtnConfig } from './config'
-import { nanoid } from '../../utils'
+import { deepClone, nanoid } from '../../utils'
 
 export default {
   name: 'LTable',
@@ -62,7 +62,7 @@ export default {
           }
         }
       });
-      return JSON.parse(JSON.stringify({ ...defaultTableConfig, ...this.$attrs }))
+      return deepClone({ ...defaultTableConfig, ...this.$attrs })
     },
     // 生成插槽
     slots(){
@@ -113,11 +113,11 @@ export default {
       v-on="$listeners"
     >
       <template
-        v-for="{ slotName, imgW, imgH, btns } in slots"
+        v-for="({ slotName, imgW, imgH, btns }, index) in slots"
         #[slotName]="{ data, column, row, rowIndex }"
       >
         <!-- 按钮组 -->
-        <div v-if="column.type === 'btn'" :key="slotName">
+        <div v-if="column.type === 'btn'" :key="index">
           <el-button
             v-for="(btn, bIndex) in btns"
             :key="bIndex"
@@ -128,7 +128,7 @@ export default {
         </div>
 
         <!-- 图片 -->
-        <div v-else-if="column.type === 'img'" :key="slotName">
+        <div v-else-if="column.type === 'img'" :key="index">
           <el-image
             :style="{
               width: `${imgW}`,
