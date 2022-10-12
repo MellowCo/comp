@@ -1,5 +1,7 @@
 <script>
 import Form from './components/Form/Form.vue'
+import Hidden from './components/Form/Hidden.vue'
+import Tip from './components/Form/Tip.vue'
 import Date from './components/Form/Date.vue'
 import Input from './components/Form/Input.vue'
 import Select from './components/Form/Select.vue'
@@ -24,6 +26,8 @@ import BaseModal from './components/Modal/Base.vue'
 export default {
   name: 'App',
   components: {
+    Hidden,
+    Tip,
     Form,
     Date,
     Input,
@@ -50,6 +54,8 @@ export default {
 
 <template>
   <div id="app">
+    <Tip></Tip>
+    <Hidden></Hidden>
     <BaseModal />
     <RadioTable />
     <FT />

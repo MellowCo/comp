@@ -122,7 +122,12 @@ export default {
   <el-form ref="formRef" :model="data" size="mini" v-bind="_config">
     <el-row :gutter="15">
       <template v-for="(item, index) in formItem">
-        <el-col v-if="showItem(item)" :key="index" :span="item.span || 6">
+        <el-col
+          v-if="showItem(item)"
+          v-show="!item.hidden"
+          :key="index"
+          :span="item.span || 6"
+        >
           <el-form-item
             :prop="item.prop"
             :label="item.label"
@@ -177,6 +182,10 @@ export default {
                 {{ item.appendText }}
               </template>
             </component>
+
+            <div style="text-align: left; font-size: 0.75rem" v-if="item.tip">
+              {{ item.tip }}
+            </div>
           </el-form-item>
         </el-col>
       </template>

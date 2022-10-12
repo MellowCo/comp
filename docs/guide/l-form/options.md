@@ -21,17 +21,18 @@
 |---------|----------|---------|-------------|--------|
 | prop |　表单域 data 字段 | string  | - | - |
 | label | 标签文本 | string | - | - |
-| labelWidth | 表单域标签的的宽度，例如 '50px'。支持 auto。 | string | - | - |
 | span | el-form-item 占据的列数 | number | - | 6 |
 | optionLabel | select option 中显示的 label 字段，对应 options 中的数据 | - | - |
 | optionValue | select option 中显示的 value 字段，对应 options 中的数据 | - | - |
 | appendText | input append 显示的文本内容，[见 element-ui](https://element.eleme.cn/#/zh-CN/component/input#fu-he-xing-shu-ru-kuang) | - | - |
 | comp | 渲染的表单组件名称，与<a href="#componentMap">componentsMap</a>，[defaultItemConfig](#defaultItemConfig)关联 | string | - | - |
 | slotName | 插槽名称，当 comp 为slot时使用 | string | - | - |
-| config | 每项表单组件的属性设置，[见 element-ui](https://element.eleme.cn/#/zh-CN/component/input#input-attributes) | object | - | - |
 | handle | 每项表单组件的时间设置，[见 element-ui](https://element.eleme.cn/#/zh-CN/component/input#input-events) | object | - | - |
-| vIf | 控制 el-form-item 显示 | {prop,value}<br>{props,values,flag}<br>()=>boolean | - | - |
-| vElse | 控制 el-form-item 显示 | {prop,value}<br>{props,values,flag}<br>()=>boolean | - | - |
+| vIf | v-if，控制 el-form-item 显示 | {prop,value}<br>{props,values,flag}<br>()=>boolean | - | - |
+| vElse | v-if，控制 el-form-item 显示 | {prop,value}<br>{props,values,flag}<br>()=>boolean | - | - |
+| hidden | v-show ，隐藏当前表单组件 | boolean | - | true |
+| tip | 提示文本 | string | - | '' |
+| 其他参数 | 每项表单组件的属性设置，[见 element-ui](https://element.eleme.cn/#/zh-CN/component/input#input-attributes) | object | - | - |
 
 
 ## componentMap

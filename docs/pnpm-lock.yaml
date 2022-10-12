@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@meoc/comp': ^0.0.10
+  '@meoc/comp': ^0.0.13
   '@vuepress-reco/vuepress-plugin-extract-code': ^1.0.4
   element-ui: ^2.15.10
   vuepress: ^1.9.7
@@ -9,7 +9,7 @@ specifiers:
   xe-utils: ^3.5.7
 
 dependencies:
-  '@meoc/comp': 0.0.10
+  '@meoc/comp': 0.0.13
   element-ui: 2.15.10
   vxe-table: 3.6.6_xe-utils@3.5.7
   xe-utils: 3.5.7
@@ -1255,8 +1255,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@meoc/comp/0.0.10:
-    resolution: {integrity: sha512-sCCvbdApMOiDsROY9h/MGhcFvGGiPrqTtFk2yuc8dxClIhaH3aEYTTs7knVB0yTvtIh5V7vb/Eu1xk/GXnOacA==}
+  /@meoc/comp/0.0.13:
+    resolution: {integrity: sha512-qZdVa88HkPDwVV11jGnPplVh+eWzgRhr/z30nqiA/vMlaE7zYVeeqnsfCGDmD2f8OtYlxBnceb8RAv5a0B3RuA==}
     dependencies:
       core-js: 3.25.5
       dayjs: 1.11.5

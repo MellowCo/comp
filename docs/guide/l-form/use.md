@@ -85,3 +85,11 @@
 <LForm-Slot slot="source"/>
 <<< @/.vuepress/components/LForm/Slot.vue
 </demo-block>
+
+
+## 帮助信息
+
+<demo-block>
+<LForm-Tip slot="source"/>
+<<< @/.vuepress/components/LForm/Tip.vue
+</demo-block>

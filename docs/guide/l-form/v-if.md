@@ -39,3 +39,14 @@
 <LForm-VElse slot="source"/>
 <<< @/.vuepress/components/LForm/VElse.vue
 </demo-block>
+
+
+
+## hidden 隐藏表单组件
+
+使用 `hidden` 隐藏表单，使用 `v-show` 
+
+<demo-block>
+<LForm-Hidden slot="source"/>
+<<< @/.vuepress/components/LForm/Hidden.vue
+</demo-block>
