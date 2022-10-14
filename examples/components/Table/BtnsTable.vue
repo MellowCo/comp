@@ -50,6 +50,25 @@ export default {
               }
             ] },
         ],
+        showFooter: true,
+        footerMethod: ({ columns, data }) => {
+          return [
+            columns.map((column, index) => {
+              if(index === 0){
+                return '平均'
+              }else if([ 'num1', 'age' ].includes(column.property)){
+                return this.sumNum(data, column.property)
+              }
+              return null
+            })
+          ]
+        },
+        editRules: {
+          realArea: [
+            { required: true, message: '请输入实际面积' },
+            { pattern: /(?:^[1-9]([0-9]+)?(?:\.[0-9]{1,2})?$)|(?:^(?:0){1}$)|(?:^[0-9]\.[0-9](?:[0-9])?$)/, message: '请输入正确的数据' }
+          ]
+        }
       },
       show: false
     }

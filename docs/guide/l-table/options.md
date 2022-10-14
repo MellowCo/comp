@@ -23,4 +23,6 @@
 | 方法名    | 说明     | 参数    |
 |---------|----------|---------|
 | query | 执行表格查询 `fetch` 方法，[示例](/guide/l-table/use.md#网络请求分页) | - |
+| validate | 校验当前表格数据 | - |
 | method | 执行 [vxe-table methods](https://vxetable.cn/v3/#/grid/api)，[示例](/guide/l-table/use.md#vxe-table-methods) | (methodName ,...args) => {} |
+| asyncMethod | 执行 [vxe-table promise methods](https://vxetable.cn/v3/#/grid/api)，[示例](/guide/l-table/use.md#vxe-table-methods) | (methodName ,...args) => {} |
