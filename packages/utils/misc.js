@@ -24,7 +24,9 @@ export function deepClone(obj){
     return null
   }
   const type = getType(obj)
-  if(type === 'map'){
+  if(type === 'regexp'){
+    return obj
+  }else if(type === 'map'){
     target = new Map()
     for (let [ key, value ] of obj){
       target.set(key, value)
