@@ -66,8 +66,7 @@ export default {
     },
     // 生成插槽
     slots(){
-      const { columns } = this.tableConfig    
-
+      const { columns } = this.tableConfig
       const slots = []
       columns.forEach(({ slotName, imgW = '100px', imgH = '100px', btns }) => {
         slotName && slots.push({ slotName, imgW, imgH, btns })
@@ -100,6 +99,18 @@ export default {
     method(methodName, ...args){
       return this.$refs.tableRef[methodName](...args)
     },
+    // 调用 vxe-table promise method
+    async asyncMethod(methodName, ...args){
+      return await this.$refs.tableRef[methodName](...args)
+    },
+    async validate(){
+      // 校验当前表格数据
+      const errMap = await this.$refs.tableRef.validate(true)
+
+      if(errMap){
+        throw errMap
+      }
+    }
   },
 }
 </script>
