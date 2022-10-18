@@ -64,6 +64,32 @@
 <<< @/.vuepress/components/LForm/Radio.vue
 </demo-block>
 
+
+## 图片上传
+`action` 设置上传地址
+`transform` 设置图片的回传格式
+
+```js
+// 例如 返回 response 中 filePath
+function transform(fileList){
+  return fileList.map(file => {
+    const { url, response } = file
+
+    if(url.startsWith('http')){
+      return url
+    }else{
+      const { data } = response || {}
+      return data.filePath
+    }
+  })
+}
+```
+
+<demo-block>
+<LForm-Upload slot="source"/>
+<<< @/.vuepress/components/LForm/Upload.vue
+</demo-block>
+
 ## Switch 开关
 
 <demo-block>
@@ -93,3 +119,5 @@
 <LForm-Tip slot="source"/>
 <<< @/.vuepress/components/LForm/Tip.vue
 </demo-block>
+
+
