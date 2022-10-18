@@ -6,4 +6,12 @@ module.exports = defineConfig({
       entry: 'examples/main.js',
     },
   },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://xxxxxxxxxxx',
+        changeOrigin: true
+      }
+    }
+  },
 })

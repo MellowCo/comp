@@ -141,4 +141,6 @@ export const componentsMap = {
   // el-slider
   'slider': 'el-slider',
   'el-slider': 'el-slider',
+
+  'upload': 'LUpload'
 }

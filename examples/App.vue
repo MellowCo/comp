@@ -22,6 +22,8 @@ import FM from './components/Modal/Form.vue'
 import FT from './components/Modal/Table.vue'
 import RadioTable from './components/Modal/RadioTable.vue'
 import BaseModal from './components/Modal/Base.vue'
+import BaseUpload from './components/Upload/Base.vue'
+import FormUpload from './components/Upload/Form.vue'
 
 export default {
   name: 'App',
@@ -47,13 +49,17 @@ export default {
     BaseContent,
     FM,
     FT,
-    RadioTable, BaseModal
+    RadioTable, BaseModal,
+    BaseUpload,
+    FormUpload
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <FormUpload></FormUpload>
+    <BaseUpload></BaseUpload>
     <Tip></Tip>
     <Hidden></Hidden>
     <BaseModal />
