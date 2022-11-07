@@ -2,17 +2,19 @@
   <el-dialog :visible.sync="_show" v-bind="dialogConfig" v-on="$listeners">
     <slot></slot>
     <template #footer>
-      <el-button icon="el-icon-close" size="mini" @click="_show = false"
-        >取 消</el-button
-      >
-      <el-button
-        :loading="submitLoading"
-        icon="el-icon-check"
-        size="mini"
-        type="primary"
-        @click="onSubmit"
-        >确 定</el-button
-      >
+      <div v-if="showFooter">
+        <el-button icon="el-icon-close" size="mini" @click="_show = false"
+          >取 消</el-button
+        >
+        <el-button
+          :loading="submitLoading"
+          icon="el-icon-check"
+          size="mini"
+          type="primary"
+          @click="onSubmit"
+          >确 定</el-button
+        >
+      </div>
     </template>
   </el-dialog>
 </template>
@@ -30,6 +32,10 @@ export default {
     submit: {
       type: Function,
       default: () => {}
+    },
+    showFooter: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
