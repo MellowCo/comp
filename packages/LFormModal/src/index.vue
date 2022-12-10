@@ -5,7 +5,9 @@
     v-on="$listeners"
     @close="handleClose"
   >
+    <slot name="top"></slot>
     <LForm ref="formRef" v-bind="formConfig"></LForm>
+    <slot name="bottom"></slot>
 
     <template #footer>
       <el-button icon="el-icon-close" size="mini" @click="_show = false"

@@ -58,6 +58,12 @@ export default {
             ],
           },
           {
+            comp: 'title',
+            prop: 'name',
+            label: '活动名称2222222222222222',
+            span: 24,
+          },
+          {
             comp: 'radio',
             prop: 'resource',
             label: '特殊资源',

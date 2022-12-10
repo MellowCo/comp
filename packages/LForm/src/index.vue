@@ -128,7 +128,15 @@ export default {
           :key="index"
           :span="item.span || 6"
         >
+          <div
+            style="font-size: 20px; font-weight: 700"
+            v-if="item.comp === 'title'"
+          >
+            {{ item.label }}
+          </div>
+
           <el-form-item
+            v-else
             :prop="item.prop"
             :label="item.label"
             :rules="item.rules"
