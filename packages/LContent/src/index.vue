@@ -31,20 +31,22 @@
               @click="onReset"
               >重置</el-button
             >
-
             <slot name="btn"></slot>
           </div>
         </el-col>
       </template>
     </LForm>
     <slot name="center"></slot>
-    <LTable ref="tableRef" v-bind="tableConfig" :fetch="search"></LTable>
+    <LTable ref="tableRef" v-bind="tableConfig" :fetch="search">
+      <template v-for="slotName in tableSlots" #[slotName]="scope">
+        <slot :name="slotName" v-bind="scope" />
+      </template>
+    </LTable>
   </div>
 </template>
 
 <script>
 import { successMessage } from '../../utils';
-
 
 export default {
   name: 'LContent',
@@ -67,6 +69,10 @@ export default {
         query: null,
         output: null
       })
+    },
+    tableSlots: {
+      type: Array,
+      default: () => []
     }
   },
   data(){
@@ -91,6 +97,7 @@ export default {
       try {
         this.searchLoading = true
         await this.$refs.formRef.validate()
+
         await this.ajax.query(page, size)
       } finally {
         this.searchLoading = false
@@ -103,6 +110,7 @@ export default {
       try {
         this.outputLoading = true
         await this.$refs.formRef.validate()
+
         await this.ajax.output()
         successMessage('导出成功')
       } finally {
@@ -122,6 +130,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
