@@ -7,6 +7,7 @@
 | tableConfig | [LTable Attributes](/guide/l-table/options.md#ltable-attributes) | object| - |-|
 | ajax | 搜索和导出的ajax方法 | {query:()=>{},output:()=>{}} | - | - |
 | btnSpan | 操作按钮占据的列数 | number | - | 6 |
+| tableSlots | 表格插槽 | string[] | - | [] |
 
 ## LContent Methods
 | 方法名    | 说明     | 参数    |

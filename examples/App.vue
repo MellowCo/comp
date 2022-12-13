@@ -17,13 +17,15 @@ import BtnsTable from './components/Table/BtnsTable.vue'
 import PageTable from './components/Table/PageTable.vue'
 import ImgTable from './components/Table/ImgTable.vue'
 import Method from './components/Table/Method.vue'
-import BaseContent from './components/Content/Base.vue'
 import FM from './components/Modal/Form.vue'
 import FT from './components/Modal/Table.vue'
 import RadioTable from './components/Modal/RadioTable.vue'
 import BaseModal from './components/Modal/Base.vue'
 import BaseUpload from './components/Upload/Base.vue'
 import FormUpload from './components/Upload/Form.vue'
+import BaseContent from './components/Content/Base.vue'
+import SlotContent from './components/Content/Slot.vue'
+
 
 export default {
   name: 'App',
@@ -51,13 +53,15 @@ export default {
     FT,
     RadioTable, BaseModal,
     BaseUpload,
-    FormUpload
+    FormUpload,
+    SlotContent
   },
 }
 </script>
 
 <template>
   <div id="app">
+    <SlotContent></SlotContent>
     <FormUpload></FormUpload>
     <BaseUpload></BaseUpload>
     <Tip></Tip>
