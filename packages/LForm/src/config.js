@@ -142,5 +142,8 @@ export const componentsMap = {
   'slider': 'el-slider',
   'el-slider': 'el-slider',
 
+  // el-input-number
+  'number': 'el-input-number',
+
   'upload': 'LUpload'
 }
