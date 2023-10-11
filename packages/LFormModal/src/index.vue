@@ -6,7 +6,11 @@
     @close="handleClose"
   >
     <slot name="top"></slot>
-    <LForm ref="formRef" v-bind="formConfig"></LForm>
+    <LForm ref="formRef" v-bind="formConfig">
+      <template v-for="slotName in slots" #[slotName]="scope">
+        <slot :name="slotName" v-bind="scope" />
+      </template>
+    </LForm>
     <slot name="bottom"></slot>
 
     <template #footer>
@@ -42,6 +46,10 @@ export default {
     submit: {
       type: Function,
       default: () => {}
+    },
+    slots: {
+      type: Array,
+      default: () => []
     }
   },
   computed: {
@@ -81,5 +89,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>
